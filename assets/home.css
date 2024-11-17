@@ -52,20 +52,6 @@ body {
 main {
   grid-row: 2;
   text-align: center;
-  /*.about*/
-  /*centrare il testo e h2*/
-  /*.projects*/
-  /*devono avere un hover che zoomma, ha un  ombra di base a quando viene hover diventa piu 
-  grande quindi credo con una transition all'ombreggiatura 
-  poi devono essere tutte di una certa grandezza e devono starcene 3 per riga quindi usare un wrap*/
-  /*testo e h3 centrati*/
-  /*.progetto1*/
-  /*.immagini*/
-  /*devono essere di una certa altezza e object-fit cover*/
-  /*.contact*/
-  /*titolo h2 centrato*/
-  /*style al form
-  bottone deve essere centrato*/
 }
 main h2 {
   color: #3f6d48;
@@ -91,6 +77,7 @@ main .hero button {
   font-size: 1.2rem;
   background: #5aa1bd;
   border: none;
+  cursor: pointer;
 }
 main .hero button:hover {
   background-color: #4187a3;
@@ -107,7 +94,7 @@ main .about p {
   font-size: 1.1rem;
 }
 main #progetti {
-  margin: 50px 0 0 0;
+  margin-top: 50px;
 }
 main .projects {
   padding: 20px 50px 50px 50px;
@@ -116,28 +103,70 @@ main .projects {
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-main .projects .progetto1,
-main .projects .progetto2,
-main .projects .progetto3,
-main .projects .progetto4,
-main .projects .progetto5,
-main .projects .progetto6 {
+main .projects .progetto {
   border: 1px solid #235e23;
   border-radius: 15px;
+  background-color: #e7f0e7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-main .projects .progetto1 h3,
-main .projects .progetto2 h3,
-main .projects .progetto3 h3,
-main .projects .progetto4 h3,
-main .projects .progetto5 h3,
-main .projects .progetto6 h3 {
+main .projects .progetto img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+main .projects .progetto h3 {
   color: #3f6d48;
 }
+main .projects .progetto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+main .contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .contact input,
+main .contact textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+main .contact button {
+  background: #5aa1bd;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 15px 30px;
+  font-size: 1rem;
+}
+main .contact button:hover {
+  background-color: #4187a3;
+}
 
-/*footer grid 3*/
 footer {
   grid-row: 3;
-  /*centrare il p*/
-  /*icone social space around*/
   background-color: #205320;
+  text-align: center;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+footer ul img {
+  height: 40px;
+  width: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  padding: 0 30px;
 }/*# sourceMappingURL=home.css.map */
