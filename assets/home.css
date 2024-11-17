@@ -34,7 +34,7 @@ body {
   flex-direction: row-reverse;
 }
 .header .logo img {
-  height: 40px;
+  height: 50px;
   padding-right: 10px;
 }
 .header ul {
@@ -96,17 +96,42 @@ main .hero button:hover {
   background-color: #4187a3;
 }
 main .about,
-main .projects,
 main .contact {
   padding: 50px;
 }
 main .about p,
-main .projects p,
 main .contact p {
   color: #0e240e;
 }
 main .about p {
   font-size: 1.1rem;
+}
+main #progetti {
+  margin: 50px 0 0 0;
+}
+main .projects {
+  padding: 20px 50px 50px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+main .projects .progetto1,
+main .projects .progetto2,
+main .projects .progetto3,
+main .projects .progetto4,
+main .projects .progetto5,
+main .projects .progetto6 {
+  border: 1px solid #235e23;
+  border-radius: 15px;
+}
+main .projects .progetto1 h3,
+main .projects .progetto2 h3,
+main .projects .progetto3 h3,
+main .projects .progetto4 h3,
+main .projects .progetto5 h3,
+main .projects .progetto6 h3 {
+  color: #3f6d48;
 }
 
 /*footer grid 3*/
