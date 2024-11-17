@@ -1,30 +1,118 @@
-/*body margin 0*/
 body {
   margin: 0;
-  background-color: #3a683a;
+  background-color: #e3fae1;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*grid*/
 .grid-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
 }
 
-/*header grid 1*/
 .header {
   grid-row: 1;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: #5aa1bd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.header a {
+  text-decoration: none;
+  color: #3f6d48;
+}
+.header .logo {
+  font-size: 25px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.header .logo img {
+  height: 40px;
+  padding-right: 10px;
+}
+.header ul {
+  display: flex;
+  list-style: none;
+}
+.header ul a {
+  color: #235e23;
+  padding: 0 20px;
+}
+.header ul a:hover {
+  color: #153915;
 }
 
-/*main grid 2*/
 main {
   grid-row: 2;
+  text-align: center;
+  /*.about*/
+  /*centrare il testo e h2*/
+  /*.projects*/
+  /*devono avere un hover che zoomma, ha un  ombra di base a quando viene hover diventa piu 
+  grande quindi credo con una transition all'ombreggiatura 
+  poi devono essere tutte di una certa grandezza e devono starcene 3 per riga quindi usare un wrap*/
+  /*testo e h3 centrati*/
+  /*.progetto1*/
+  /*.immagini*/
+  /*devono essere di una certa altezza e object-fit cover*/
+  /*.contact*/
+  /*titolo h2 centrato*/
+  /*style al form
+  bottone deve essere centrato*/
+}
+main h2 {
+  color: #3f6d48;
+  font-size: 1.6rem;
+}
+main .hero {
+  margin-top: 90px;
+  background: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0") no-repeat center center/cover;
+  height: 93vh;
+  color: #e7f0e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .hero h1 {
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+main .hero button {
+  border-radius: 15px 30px;
+  padding: 10px 20px;
+  color: #e7f0e7;
+  font-size: 1.2rem;
+  background: #5aa1bd;
+  border: none;
+}
+main .hero button:hover {
+  background-color: #4187a3;
+}
+main .about,
+main .projects,
+main .contact {
+  padding: 50px;
+}
+main .about p,
+main .projects p,
+main .contact p {
+  color: #0e240e;
+}
+main .about p {
+  font-size: 1.1rem;
 }
 
-/*about us*/
-/*contact us*/
 /*footer grid 3*/
 footer {
   grid-row: 3;
+  /*centrare il p*/
+  /*icone social space around*/
+  background-color: #205320;
 }/*# sourceMappingURL=home.css.map */
